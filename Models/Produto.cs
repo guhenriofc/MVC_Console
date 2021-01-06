@@ -36,8 +36,8 @@ namespace MVC_Console.Models
                 string[] atributos = item.Split(";");
                 Produto prod1 = new Produto();
                 prod1.Codigo = int.Parse(atributos[0]);
-                prod1.Nome = atributos[0];
-                prod1.Preco = float.Parse(atributos[0]);
+                prod1.Nome = atributos[1];
+                prod1.Preco = float.Parse(atributos[2]);
 
                 produtos.Add(prod1);
 

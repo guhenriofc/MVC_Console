@@ -1,5 +1,5 @@
 ﻿using System;
-using MVC_Console.Models;
+using MVC_Console.Controller;
 
 namespace MVC_Console
 {
@@ -7,7 +7,8 @@ namespace MVC_Console
     {
         static void Main(string[] args)
         {
-            // Produto produtoTeste = new Produto();
+            ProdutoController prod = new ProdutoController();
+            prod.ListarProdutos();
         }
     }
 }
