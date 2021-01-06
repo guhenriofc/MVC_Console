@@ -17,5 +17,10 @@ namespace MVC_Console.Controller
             produtoView.Listar(produto.Ler());
 
         }
+         public void Cadastrar(){
+
+            produto.Inserir(produtoView.CadastrarProdutos());
+
+         }
     }
 }

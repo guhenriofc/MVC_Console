@@ -27,7 +27,7 @@ namespace MVC_Console.Models
         }
 
         public List<Produto> Ler(){
-
+            //Separando as informações
             List<Produto> produtos = new List<Produto>();
             string[] linhas = File.ReadAllLines(PATH);
 
@@ -44,6 +44,20 @@ namespace MVC_Console.Models
             }
             
             return produtos;
+        }
+
+        public void Inserir(Produto produto){
+
+            string[] linhas  = {PrepararLinhasCSV(produto)};
+
+            File.AppendAllLines(PATH, linhas);
+        
+        }
+
+        public string PrepararLinhasCSV(Produto prod){
+
+            return $"{prod.Codigo};{prod.Nome};{prod.Preco}";
+
         }
         
 
